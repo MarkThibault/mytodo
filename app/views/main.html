@@ -1,6 +1,13 @@
-<div class="jumbotron">
+<div class="hero-unit">
   <h2>My Todos</h2>
   <p ng-repeat="todo in todos">
     <input type="text" ng-model="todo">
   </p>
+
+  <form ng-submit="addTodo()">
+  	<div class="controls form-inline">
+      <input type="text" ng-model="newTodo" size="20">
+      <input type="submit" class="btn btn-sm btn-primary" value="add">
+  	</div>
+  </form>
 </div>
