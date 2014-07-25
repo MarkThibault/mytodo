@@ -1,0 +1,42 @@
+<div class="panel panel-default">
+  <div class="panel-header panel-body">
+    <h1>Example 1</h1>
+  </div>
+  <div class="panel-body">
+    <p>First name:<input ng-model="firstName" type="text"/></p>
+    <p>Last name:<input ng-model="lastName" type="text"/></p>
+    <p>Hello {{firstName}} {{lastName}}</p>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-header panel-body">
+    <h1>Example 2</h1>
+  </div>
+  <div class="panel-body">
+    <ul>
+      <li ng-repeat="name in names track by $index">{{name}}
+        <button class="btn btn-sm btn-default" ng-click="removeName($index)">Remove</button></li>
+    </ul>
+    <form ng-submit="addName()">
+      <input type="text" ng-model="enteredName">
+      <input type="submit" value="add">
+    </form>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-header panel-body">
+    <h1>Example 3</h1>
+  </div>
+  <div class="panel-body">
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>Population</th>
+      </tr>
+      <tr ng-repeat="country in countries">
+        <td>{{country.name}}</td>
+        <td>{{country.population}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
